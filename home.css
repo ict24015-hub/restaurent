@@ -1,0 +1,356 @@
+/* --- CSS VARIABLES & RESET --- */
+:root {
+    --primary-green: hsl(96, 19%, 62%);
+    --dark-blue: #0b132a;
+    --text-dark: #222222;
+    --text-muted: #666666;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text-dark);
+    background-color: #ffffff;
+}
+
+/* --- CSS STYLING --- */
+:root {
+    --bg-color: #f4f2f2;
+    --text-dark: #111111;
+    --text-muted: #555555;
+    --accent-green: #5f7443;
+    --footer-bg: #0a1128;
+    --footer-text: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', 'Georgia', serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- 1. MAIN NAVIGATION BAR --- */
+.navbar {
+position: sticky;
+top: 0;
+width: 100%;
+background-color:hsl(96, 19%, 62%); /* Blur effect */
+backdrop-filter: blur(5px);
+border-bottom: 1px solid #eeeeee;
+z-index: 1000; 
+padding: 20px 0;
+transition: all 0.3s ease;
+}
+
+.nav-container {
+max-width: 1200px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 20px;
+}
+
+.nav-logo {
+font-family: 'Playfairy Disply', serif;
+font-size: 1.4rem;
+font-style: italic;
+color: var(--text-dark);
+text-decoration: none;
+font-weight: bold;
+}
+
+.nav-links {
+display: flex;
+list-style: none;
+gap: 30px;
+}
+
+.nav-links a {
+color: var(--text-dark);
+text-decoration: none;
+font-size: 0.9rem;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-family: sans-serif; /* Navigation links(clean look) */
+transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+color: var(--accent-green); /*color different (mouse)*/
+}
+
+/*Navigation for Mobile Devices*/
+@media (max-width: 768px) {
+.nav-container {
+flex-direction: column;
+gap: 15px;
+}
+.nav-links {
+gap: 15px;
+flex-wrap: wrap;
+justify-content: center;
+}
+}
+
+/* --- 2. HERO CONTAINER & CONTENT --- */
+.hero-container {
+    position: relative;
+    background-color: var(--primary-green);
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px 120px 20px; /* Booking bar*/
+    text-align: center;
+    color: #ffffff;
+}
+
+.hero-subtitle {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    opacity: 0.95;
+}
+
+.hero-title {
+    font-family: var(--font-serif);
+    font-size: 4rem;
+    font-weight: 400;
+    max-width: 900px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+
+
+/* Content spacer below hero for floating bar visibility */
+.content-spacer {
+    height: 100px; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .hero-title { font-size: 2.5rem; }
+    .booking-bar { flex-direction: column; gap: 20px; bottom: -80px; text-align: center; }
+    .booking-inputs { gap: 20px; }
+    .content-spacer { height: 16px; }
+    .main-nav { flex-direction: column; gap: 15px; }
+    .top-bar { display: none; } 
+}
+
+.home-section {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+section h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.btn-home {
+    background-color: var(--accent-green);
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-home:hover {
+    background-color: #4a5a33;
+}
+
+.home-section {
+    padding: 60px 0;
+}
+
+.home-image {
+    flex: 1;
+    min-width: 300px;
+    height: 350px;
+    background-color: #f0f0f0;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+}
+
+
+/* --- EXPERIENCE SECTION STYLING --- */
+.experience-section {
+padding: 80px 0;
+text-align: center;
+background-color: #ffffff;
+}
+
+.exp-subtitle {
+font-family: 'Playfair Display', serif;
+font-style: italic;
+color: #555;
+font-size: 1.4rem;
+margin-bottom: 10px;
+}
+
+.exp-title {
+font-family: 'Playfair Display', serif;
+font-size: 2.5rem;
+font-weight: 400;
+margin-bottom: 20px;
+}
+
+.exp-desc {
+max-width: 700px;
+margin: 0 auto 50px auto;
+color: #666;
+font-size: 1rem;
+line-height: 1.6;
+}
+
+/* Responsive Grid Layout (3 cards for line) */
+.experience-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 30px;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+.reveal-card {
+text-align: left;
+background: #ffffff;
+
+/* Before the Animation */
+opacity: 0;
+transform: translateY(50px);
+transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+        transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* When active JavaScript  */
+.reveal-card.is-visible {
+opacity: 1;
+transform: translateY(0);
+}
+
+.card-img {
+height: 220px;
+background-size: cover;
+background-position: center;
+margin-bottom: 15px;
+border-radius: 4px;
+}
+
+.reveal-card h3 {
+font-size: 1.3rem;
+font-weight: 500;
+margin-bottom: 10px;
+color: #111;
+}
+
+.reveal-card p {
+color: #666;
+font-size: 0.95rem;
+line-height: 1.5;
+}
+
+/* Mobile Screens(grid view likw column) */
+@media (max-width: 992px) {
+.experience-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+.experience-grid { grid-template-columns: 1fr; }
+}
+
+/* Footer Section */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 60px 20px 30px 20px;
+    font-size: 0.9rem;
+}
+
+footer .footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    border-bottom: 1px solid #222c48;
+    padding-bottom: 40px;
+}
+
+.footer-col h4 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #a0aec0;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: var(--footer-text);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-col ul li a:hover {
+    color: #cbd5e0;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 30px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.brand-logo {
+    font-size: 1.5rem;
+    font-style: italic;
+}

@@ -1,0 +1,377 @@
+/* --- CSS VARIABLES & RESET --- */
+:root {
+    --primary-green: hsl(96, 19%, 62%);
+    --dark-blue: #0b132a;
+    --text-dark: #222222;
+    --text-muted: #666666;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text-dark);
+    background-color: #ffffff;
+}
+
+/* --- CSS STYLING --- */
+:root {
+    --bg-color: #ffffff;
+    --text-dark: #111111;
+    --text-muted: #555555;
+    --accent-green: #5f7443;
+    --footer-bg: #0a1128;
+    --footer-text: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', 'Georgia', serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- 1. MAIN NAVIGATION BAR --- */
+.navbar {
+position: sticky;
+top: 0;
+width: 100%;
+background-color:hsl(96, 19%, 62%); /* Blur effect */
+backdrop-filter: blur(5px);
+border-bottom: 1px solid #eeeeee;
+z-index: 1000; 
+padding: 20px 0;
+transition: all 0.3s ease;
+}
+
+.nav-container {
+max-width: 1200px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 20px;
+}
+
+.nav-logo {
+font-family: 'Playfairy Disply', serif;
+font-size: 1.4rem;
+font-style: italic;
+color: var(--text-dark);
+text-decoration: none;
+font-weight: bold;
+}
+
+.nav-links {
+display: flex;
+list-style: none;
+gap: 30px;
+}
+
+.nav-links a {
+color: var(--text-dark);
+text-decoration: none;
+font-size: 0.9rem;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-family: sans-serif; /* Navigation links(clean look) */
+transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+color: var(--accent-green); /*color different (mouse)*/
+}
+
+/*Navigation for Mobile Devices*/
+@media (max-width: 768px) {
+.nav-container {
+flex-direction: column;
+gap: 15px;
+}
+.nav-links {
+gap: 15px;
+flex-wrap: wrap;
+justify-content: center;
+}
+}
+
+.home-image {
+    flex: 1;
+    min-width: 300px;
+    height: 550px;
+    background-color: #f0f0f0;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+}
+
+:root {
+--primary-green: #9bb18c;
+--light-green-bg: #f2f6f0;
+--text-dark: #111111;
+--text-muted: #555555;
+--bg-page: #f9f9f9; 
+--font-serif: 'Playfair Display', serif;
+--font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: var(--font-sans);
+background-color: var(--bg-page);
+color: var(--text-dark);
+line-height: 1.7;
+}
+
+.container {
+max-width: 950px; /*center (letters)*/
+margin: 0 auto;
+padding: 0 20px;
+}
+
+.hospitality-section {
+padding: 80px 0;
+}
+
+/* --- INTRO HEADER --- */
+.intro-header {
+text-align: center;
+margin-bottom: 60px;
+}
+
+.main-title {
+font-family: var(--font-serif);
+font-size: 2.8rem;
+font-weight: 400;
+line-height: 1.3;
+margin-bottom: 30px;
+color: var(--text-dark);
+}
+
+.main-desc {
+font-size: 1.05rem;
+color: var(--text-muted);
+max-width: 850px;
+margin: 0 auto;
+}
+
+/* --- WHITE CARD BOX --- */
+.hospitality-card {
+background-color: #f4f2f2;
+border-radius: 6px;
+padding: 50px 50px;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+margin-bottom: 60px;
+}
+
+/* Card Title with Sparkle Icon */
+.card-header {
+display: flex;
+align-items: center;
+gap: 15px;
+margin-bottom: 30px;
+}
+
+.sparkle-icon {
+color: var(--primary-green);
+font-size: 1.6rem;
+}
+
+.card-header h2 {
+font-family: var(--font-serif);
+font-size: 2.2rem;
+font-weight: 400;
+}
+
+/* Card Content Paragraphs */
+.intro-p {
+color: var(--text-muted);
+font-size: 1rem;
+margin-bottom: 20px;
+}
+
+.highlight-p {
+color: var(--text-dark);
+font-weight: 500;
+margin-bottom: 20px;
+}
+
+/* Custom Lists */
+.custom-list {
+list-style: none;
+margin-bottom: 30px;
+}
+
+.custom-list li {
+display: flex;
+align-items: flex-start;
+gap: 15px;
+margin-bottom: 20px;
+color: var(--text-muted);
+font-size: 0.98rem;
+}
+
+.list-icon {
+color: var(--primary-green);
+font-size: 0.9rem;
+margin-top: 6px;
+flex-shrink: 0;
+}
+
+/* Light Green Info Box */
+.green-info-box {
+background-color: var(--light-green-bg);
+border-left: 3px solid var(--primary-green);
+padding: 20px 25px;
+border-radius: 4px;
+margin-bottom: 30px;
+}
+
+.green-info-box p {
+color: var(--text-dark);
+font-size: 0.98rem;
+font-style: italic;
+}
+
+.footer-p {
+color: var(--text-muted);
+font-size: 1rem;
+margin-bottom: 35px;
+}
+
+/* Button */
+.button-container {
+text-align: left;
+}
+
+.btn-trade {
+background-color: #4a5a33;
+color: #ffffff;
+border: none;
+padding: 14px 30px;
+font-size: 0.85rem;
+font-weight: 600;
+letter-spacing: 1px;
+text-transform: uppercase;
+cursor: pointer;
+border-radius: 3px;
+transition: background 0.3s ease;
+}
+
+.btn-trade:hover {
+background-color: #4a5a33;
+}
+
+/* --- BOTTOM IMAGE --- */
+.gallery-image-wrapper {
+width: 100%;
+height: 500px;
+border-radius: 6px;
+overflow: hidden;
+box-shadow: 0 4px 25px rgba(0,0,0,0.05);
+}
+
+.gallery-image-wrapper img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+.main-title {
+font-size: 2.2rem;
+}
+.hospitality-card {
+padding: 30px 20px;
+}
+.card-header h2 {
+font-size: 1.8rem;
+}
+.gallery-image-wrapper {
+height: 300px;
+}
+}
+
+/* Footer Section */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 60px 20px 30px 20px;
+    font-size: 0.9rem;
+}
+
+footer .footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    border-bottom: 1px solid #222c48;
+    padding-bottom: 40px;
+}
+
+.footer-col h4 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #a0aec0;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: var(--footer-text);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-col ul li a:hover {
+    color: #cbd5e0;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 30px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.brand-logo {
+    font-size: 1.5rem;
+    font-style: italic;
+}
